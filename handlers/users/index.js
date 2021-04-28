@@ -5,10 +5,10 @@ const { cookie } = require('../../config/config')
 module.exports = {
     get: {
         login(req, res){
-            res.render('users/login.hbs')
+            res.render('partials/login.hbs')
         },
         register(req, res){
-            res.render('users/register.hbs')
+            res.render('partials/register.hbs')
         },
         logout(req, res){
             req.user = null

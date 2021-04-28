@@ -1,12 +1,12 @@
-<main>
-    <div class="sectionOne">
+<div class="sections-wrapper">
+    <div class="sectionOne-container">
         <div class="leftSide">
             <h1>Landing Page Heading Heading</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quam odio necessitatibus numquam natus, beatae praesentium consequatur porro deleniti iusto earum tenetur commodi doloribus, maiores harum nihil itaque distinctio minus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsa autem quisquam eum repellat mollitia, provident sint molestiae possimus excepturi voluptatem reiciendis consectetur fugit tenetur dignissimos assumenda sed, neque id!</p>
             <div class="buttons">
-                <a class="login-btn" href="/user/login">Login</a>
+                <a class="login-btn" href="#two">Login</a>
                 <span>or</span>
-                <a class="login-btn" href="/user/register">Sign Up</a>
+                <a class="login-btn" href="#two">Sign Up</a>
             </div>
 
         </div>
@@ -14,11 +14,18 @@
             <div class="sectionOne-image"></div>
         </div>
     </div>
-    <div class="sectionTwo">
+    {{#if isLoggedIn}}
 
+    {{else}}
+    <div class="sectionTwo-container" id="two">
+        <div class="home-login-container">
+            {{>login}}
+        </div>
+        <div class="home-register-container">
+            {{>register}}
+        </div>
     </div>
-    <div class="sectionThree">
+    {{/if}}
 
-    </div>
-</main>
+</div>
 
